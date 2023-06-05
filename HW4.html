@@ -158,3 +158,125 @@
     </div>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gststic.com" crossorigin="anonymous">
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "Oswald", sans-serif;
+            color: bisque;
+            line-height: 1;
+        }
+        img{
+            height: 200px;
+            transform: scale(1.5);
+            border-radius: 50% 20%/10% 40%;
+        }
+        .carousel{
+            background-color: #7f5b7f;
+            width: 800px;
+            margin: 100px auto;
+            display: flex;
+            align-items: center;
+            gap: 86px;
+            padding: 32px;
+            padding-left: 86px;
+            position: relative;
+            border-radius: 8px;
+        }
+        .text{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+        .author{
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .job{
+            font-size: 12px;
+        }
+        .btn{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-icon{
+            width: 24px;
+            height: 24px;
+            stroke: #7f5b;
+        }
+        .left{
+            left: 0;
+        }
+        .right{
+            right: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+     <img src="th.jpg" alt="圖片" />
+     <blockquote class="quote">
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio reiciendis ad rem. Cumque accusantium placeat doloribus rem consectetur nihil similique tempora earum molestias accusamus. Facere labore ea quas nesciunt eveniet.
+    </p>
+    <p class="author">name</p>
+    <p class="job">work</p>
+     </blockquote>
+     <bottom class="btn left">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="btn-icon">
+    <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M8.25 4.517.5 7.5-7.5 7.5">
+    </svg>
+     </bottom>
+     <button class="btn right">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="btn-icon">
+    <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M8.25 4.517.5 7.5-7.5 7.5">
+    </svg>
+     </button>
+    </div>
+</body>
+</html>
