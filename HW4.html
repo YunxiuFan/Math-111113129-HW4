@@ -179,17 +179,18 @@
             padding: 0;
         }
         body{
-            font-family: "Oswald", sans-serif;
-            color: bisque;
+            font-family: "Inter", sans-serif;
+            color: #343a40;
             line-height: 1;
         }
         img{
             height: 200px;
             transform: scale(1.5);
-            border-radius: 50% 20%/10% 40%;
+            border-radius: 8px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.25);
         }
         .carousel{
-            background-color: #7f5b7f;
+            background-color: #087f5b;
             width: 800px;
             margin: 100px auto;
             display: flex;
@@ -199,6 +200,8 @@
             padding-left: 86px;
             position: relative;
             border-radius: 8px;
+            color: #e6fcf5;
+            padding-right: 48px;
         }
         .text{
             font-size: 18px;
@@ -223,11 +226,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
         .btn-icon{
             width: 24px;
             height: 24px;
-            stroke: #7f5b;
+            stroke: #087f5b;
+        }
+        .btn-left{
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .btn-right{
+            right: 0;
+            top: 50%;
+            transform: translate(50%,-50%);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
         }
         .left{
             left: 0;
@@ -235,21 +251,51 @@
         .right{
             right: 0;
         }
-
-
+        .quote-text{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+        .quotee-author{
+            font-size: 4px;
+            margin-bottom: 4px;
+        }
+        .quote-job{
+            font-size: 12px;
+        }
+        .dots{
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%,32px);
+            display: flex;
+            gap: 12px;
+        }
+        .dot{
+            height: 12px;
+            width: 12px;
+            background-color: #fff;
+            border: 2px solid #087f5b;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot-fill{
+            background-color: #087f5b;
+        }
     </style>
 </head>
 <body>
     <div class="carousel">
      <img src="th.jpg" alt="圖片" />
      <blockquote class="quote">
-    <p class="text">
+    <p class="quote-text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio reiciendis ad rem. Cumque accusantium placeat doloribus rem consectetur nihil similique tempora earum molestias accusamus. Facere labore ea quas nesciunt eveniet.
     </p>
-    <p class="author">name</p>
-    <p class="job">work</p>
+    <p class="quote-author">Maria</p>
+    <p class="quote-job">Model</p>
      </blockquote>
-     <bottom class="btn left">
+     <bottom class="btn-left">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -263,7 +309,7 @@
         d="M8.25 4.517.5 7.5-7.5 7.5">
     </svg>
      </bottom>
-     <button class="btn right">
+     <button class="btn-right">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -277,6 +323,12 @@
         d="M8.25 4.517.5 7.5-7.5 7.5">
     </svg>
      </button>
+     <div class="dots">
+        <button class="dot-fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button> 
+    </div>
     </div>
 </body>
 </html>
